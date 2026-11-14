@@ -4,9 +4,9 @@
 
 Dhoop ghadi means sundial. Pick a place and a kind of work, and the agent tells you which hours of today and tomorrow are safe to work, when to stop, how long to rest each hour and how much water to drink. One short message, in six languages, that can be read aloud or sent on WhatsApp to a crew or a contractor.
 
-- Live: _add the deployed URL here_
-- Proof and numbers: `impact.html` on the live site
-- How it works: `method.html` on the live site
+- Live: https://d0txyz.github.io/dhoop-ghadi/
+- Proof and numbers: https://d0txyz.github.io/dhoop-ghadi/impact.html
+- How it works: https://d0txyz.github.io/dhoop-ghadi/method.html
 - Entry for [Code for a Billion](https://codeforindia.org/hackathon) (Bharat Agentic-AI Hackathon 2026), Climate track
 - Team: Off Hours. Built by d0t
 
