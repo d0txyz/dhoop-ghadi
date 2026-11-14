@@ -4,25 +4,16 @@ Code for a Billion requires that entries are built using AgentFoundry (AF), the 
 
 ## Log
 
-**Status: not started.** The rows below are the planned steps. A date and evidence are added to a row only when that step has been done, and rows that were not done are deleted before submission.
+AgentFoundry v0.1.80 on Windows, 14 November 2026.
 
-| Date (IST) | AF feature | What was done | Evidence |
+| Time (IST) | AF feature | What was done | Evidence |
 | --- | --- | --- | --- |
-| | Project | Opened this repository as an AF project | `docs/af/01-project.png` |
-| | Terminal | Ran `npm test` (17 tests) and `npm run backtest` | `docs/af/02-tests.png` |
-| | Agent Studio | Defined the Dhoop Ghadi agent: observe, judge, plan, hand over | `docs/af/03-agent.png` |
-| | Smart-Code | Added a seventh language to `src/i18n.js` and a test for it | commit hash, `docs/af/04-smartcode.png` |
-| | Evals | Ran the plan checks below as an eval suite | `docs/af/05-evals.png` |
+| 11:55 | Project | Opened this repository as an AF project (credential import skipped) and ran `npm test` in the AF terminal: 17 of 17 pass | `docs/af/01-project-tests.jpg` |
+| 11:56 to 12:11 | SMART-Code | Asked SMART-Code to add Gujarati as a seventh language. It read `src/i18n.js` and wrote the `gu` row in `LANGS` and the full `gu` text table in three approved `edit_file` calls (the Haiku route returned empty replies, so the task was rerun on the GPT-5 route) | `docs/af/03-smartcode.jpg`, `docs/af/smart-code-session.json` (the full SMART-Code session log) |
+| 12:12 | Review | The Gujarati draft was reviewed and corrected before commit. Mistranslations were corrected, most importantly in the heat-illness warning ("ગુલામી", slavery, where "faint" was meant, and "પાણી વાઢો", cut water, where "pour water" was meant), plus time-of-day words and a few unnatural phrases | commit diff of `src/i18n.js` |
+| 12:14 | Terminal | Ran `npm test` (17 of 17 pass, including the check that every language has every key) and `npm run backtest` in the AF terminal after the change; backtest results unchanged | `docs/af/04-tests-after-gujarati.jpg` |
 
-## Steps to do in AgentFoundry
-
-1. Sign up at agentfoundry.me and install the Windows build. On first launch, decline the offer to import credentials and settings from other tools.
-2. Open the `dhoop-ghadi` folder as a project. Screenshot.
-3. In the AF terminal run `npm test`, then `npm run backtest`. Screenshot the passing output.
-4. In Agent Studio, create an agent named Dhoop Ghadi from the description in the next section. Screenshot.
-5. With Smart-Code, give this task: "Add Gujarati (`gu`) to `src/i18n.js`, following the structure of the Hindi entry exactly, including `periods`, `hourWord`, `rangeA`, `sample` and `sampleNote`. Add `gu` to `LANGS`. Do not change any other language. Then run `npm test`." Review the result, run the tests, commit from AF.
-6. Optional: in Evals, add the checks listed below and run them.
-7. Put the screenshots in `docs/af/` and fill in the log above.
+Not done in AF: Agent Studio and Evals. The agent definition and the eval cases below are kept as reference; the same cases run as unit tests in `test/planner.test.js`.
 
 ## Agent description for Agent Studio
 

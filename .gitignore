@@ -4,3 +4,4 @@ backtest/cache/
 .env.*
 .vercel/
 .DS_Store
+.codenow/

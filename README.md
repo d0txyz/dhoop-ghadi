@@ -2,7 +2,7 @@
 
 **Safe work hours in extreme heat, for India's outdoor workers.**
 
-Dhoop ghadi means sundial. Pick a place and a kind of work, and the agent tells you which hours of today and tomorrow are safe to work, when to stop, how long to rest each hour and how much water to drink. One short message, in six languages, that can be read aloud or sent on WhatsApp to a crew or a contractor.
+Dhoop ghadi means sundial. Pick a place and a kind of work, and the agent tells you which hours of today and tomorrow are safe to work, when to stop, how long to rest each hour and how much water to drink. One short message, in seven languages, that can be read aloud or sent on WhatsApp to a crew or a contractor.
 
 - Live: https://d0txyz.github.io/dhoop-ghadi/
 - Proof and numbers: https://d0txyz.github.io/dhoop-ghadi/impact.html
@@ -28,7 +28,7 @@ Dhoop ghadi means sundial. Pick a place and a kind of work, and the agent tells 
 1. **Observes.** Reads the hourly forecast for the place (Open-Meteo, free, no key).
 2. **Judges.** Computes the Wet Bulb Globe Temperature for each hour, the heat stress index used in occupational health (ISO 7243), from temperature, humidity, wind and sunshine. Then it applies the ACGIH heat stress screening limits for the chosen workload. Each hour becomes one of five levels: work as usual, rest 15, rest 30, rest 45, stop.
 3. **Plans.** Searches every way to place one or two work blocks between 5 am and 8 pm and keeps the plan that gets closest to a full day's work with the least time in heat, at hours as close to a normal day as the heat allows. It never schedules an hour where only 15 minutes of work is allowed. If a full day is not possible safely, it says how many hours are, and says not to push for more.
-4. **Hands over.** One message in Hindi, English, Marathi, Bengali, Tamil or Telugu, with a listen button and a WhatsApp button.
+4. **Hands over.** One message in Hindi, English, Marathi, Bengali, Tamil, Telugu or Gujarati, with a listen button and a WhatsApp button.
 
 Other details:
 
@@ -92,7 +92,7 @@ Then open http://localhost:4173. The site is plain static files, so any static h
 | `src/wbgt.js` | Heat index: WBGT from weather variables |
 | `src/thresholds.js` | ACGIH limits by workload |
 | `src/planner.js` | Hour levels, day planner, shift comparison, plan verification |
-| `src/summary.js`, `src/i18n.js` | The message and its six languages |
+| `src/summary.js`, `src/i18n.js` | The message and its seven languages |
 | `src/data.js`, `src/cities.js` | Open-Meteo access with a fallback host, preset places |
 | `backtest/run.js`, `backtest/results.json` | The summer 2026 backtest and its output |
 | `impact.html`, `method.html` | Evidence and method pages |
@@ -114,7 +114,7 @@ Then open http://localhost:4173. The site is plain static files, so any static h
 - Guidance from a forecast. Not a medical device.
 - The index is modelled from forecast weather, not measured with a globe thermometer on site.
 - The limits assume ordinary work clothes, drinking water at hand and a healthy adult.
-- The Hindi, Marathi, Bengali, Tamil and Telugu text has not been reviewed by native speakers. Corrections are welcome.
+- The Hindi, Marathi, Bengali, Tamil, Telugu and Gujarati text has not been reviewed by native speakers. Corrections are welcome. The Gujarati text was drafted by AgentFoundry's SMART-Code assistant and then reviewed and corrected (see `docs/AGENTFOUNDRY.md`).
 
 ## Licence
 
