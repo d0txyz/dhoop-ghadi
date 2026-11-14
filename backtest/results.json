@@ -1,0 +1,1933 @@
+{
+  "generated": "2026-11-14T03:40:40.220Z",
+  "start": "2026-04-01",
+  "end": "2026-06-30",
+  "loads": {
+    "veryHeavy": {
+      "days": 1820,
+      "hotDays": 1820,
+      "fixed": {
+        "hours": 14560,
+        "overLimit": 14560,
+        "severe": 12092,
+        "stop": 8474,
+        "workMin": 128310
+      },
+      "plan": {
+        "hours": 9170,
+        "overLimit": 9170,
+        "severe": 827,
+        "stop": 36,
+        "workMin": 262155,
+        "missed": 827,
+        "splitDays": 1130,
+        "shortDays": 1364
+      }
+    },
+    "heavy": {
+      "days": 1820,
+      "hotDays": 1761,
+      "fixed": {
+        "hours": 14560,
+        "overLimit": 12674,
+        "severe": 10566,
+        "stop": 7313,
+        "workMin": 196905
+      },
+      "plan": {
+        "hours": 11679,
+        "overLimit": 3514,
+        "severe": 725,
+        "stop": 68,
+        "workMin": 449550,
+        "missed": 1474,
+        "splitDays": 1472,
+        "shortDays": 1282
+      }
+    },
+    "moderate": {
+      "days": 1820,
+      "hotDays": 1644,
+      "fixed": {
+        "hours": 14560,
+        "overLimit": 10566,
+        "severe": 8474,
+        "stop": 4904,
+        "workMin": 333060
+      },
+      "plan": {
+        "hours": 14016,
+        "overLimit": 2539,
+        "severe": 747,
+        "stop": 86,
+        "workMin": 685605,
+        "missed": 2154,
+        "splitDays": 1509,
+        "shortDays": 1053
+      }
+    },
+    "light": {
+      "days": 1820,
+      "hotDays": 1261,
+      "fixed": {
+        "hours": 14560,
+        "overLimit": 6105,
+        "severe": 3660,
+        "stop": 2599,
+        "workMin": 596565
+      },
+      "plan": {
+        "hours": 15017,
+        "overLimit": 1657,
+        "severe": 427,
+        "stop": 219,
+        "workMin": 825870,
+        "missed": 1108,
+        "splitDays": 1001,
+        "shortDays": 179
+      }
+    }
+  },
+  "cities": [
+    {
+      "id": "delhi",
+      "name": "Delhi",
+      "lat": 28.61,
+      "lon": 77.21,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 519,
+            "stop": 297,
+            "workMin": 9600
+          },
+          "plan": {
+            "hours": 561,
+            "overLimit": 561,
+            "severe": 38,
+            "stop": 1,
+            "workMin": 16245,
+            "missed": 38,
+            "splitDays": 68,
+            "shortDays": 50
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 82,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 552,
+            "severe": 431,
+            "stop": 228,
+            "workMin": 14595
+          },
+          "plan": {
+            "hours": 644,
+            "overLimit": 130,
+            "severe": 25,
+            "stop": 1,
+            "workMin": 25980,
+            "missed": 62,
+            "splitDays": 71,
+            "shortDays": 48
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 71,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 431,
+            "severe": 297,
+            "stop": 121,
+            "workMin": 23160
+          },
+          "plan": {
+            "hours": 743,
+            "overLimit": 92,
+            "severe": 18,
+            "stop": 0,
+            "workMin": 38040,
+            "missed": 84,
+            "splitDays": 71,
+            "shortDays": 30
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 42,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 166,
+            "severe": 87,
+            "stop": 58,
+            "workMin": 36525
+          },
+          "plan": {
+            "hours": 754,
+            "overLimit": 52,
+            "severe": 7,
+            "stop": 1,
+            "workMin": 42570,
+            "missed": 29,
+            "splitDays": 30,
+            "shortDays": 6
+          }
+        }
+      }
+    },
+    {
+      "id": "mumbai",
+      "name": "Mumbai",
+      "lat": 19.08,
+      "lon": 72.88,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 685,
+            "stop": 534,
+            "workMin": 3555
+          },
+          "plan": {
+            "hours": 350,
+            "overLimit": 350,
+            "severe": 42,
+            "stop": 1,
+            "workMin": 9855,
+            "missed": 42,
+            "splitDays": 38,
+            "shortDays": 82
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 90,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 695,
+            "severe": 638,
+            "stop": 463,
+            "workMin": 5820
+          },
+          "plan": {
+            "hours": 544,
+            "overLimit": 247,
+            "severe": 65,
+            "stop": 3,
+            "workMin": 19395,
+            "missed": 108,
+            "splitDays": 87,
+            "shortDays": 81
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 88,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 638,
+            "severe": 534,
+            "stop": 264,
+            "workMin": 11865
+          },
+          "plan": {
+            "hours": 694,
+            "overLimit": 206,
+            "severe": 60,
+            "stop": 2,
+            "workMin": 31845,
+            "missed": 157,
+            "splitDays": 81,
+            "shortDays": 70
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 76,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 377,
+            "severe": 158,
+            "stop": 73,
+            "workMin": 28905
+          },
+          "plan": {
+            "hours": 791,
+            "overLimit": 171,
+            "severe": 28,
+            "stop": 7,
+            "workMin": 41415,
+            "missed": 88,
+            "splitDays": 39,
+            "shortDays": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "kolkata",
+      "name": "Kolkata",
+      "lat": 22.57,
+      "lon": 88.36,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 651,
+            "stop": 525,
+            "workMin": 4200
+          },
+          "plan": {
+            "hours": 249,
+            "overLimit": 249,
+            "severe": 48,
+            "stop": 4,
+            "workMin": 6690,
+            "missed": 48,
+            "splitDays": 16,
+            "shortDays": 88
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 675,
+            "severe": 597,
+            "stop": 492,
+            "workMin": 6300
+          },
+          "plan": {
+            "hours": 398,
+            "overLimit": 194,
+            "severe": 51,
+            "stop": 9,
+            "workMin": 13335,
+            "missed": 85,
+            "splitDays": 31,
+            "shortDays": 86
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 90,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 597,
+            "severe": 525,
+            "stop": 404,
+            "workMin": 11025
+          },
+          "plan": {
+            "hours": 554,
+            "overLimit": 142,
+            "severe": 56,
+            "stop": 18,
+            "workMin": 24180,
+            "missed": 139,
+            "splitDays": 65,
+            "shortDays": 81
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 85,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 448,
+            "severe": 343,
+            "stop": 284,
+            "workMin": 20835
+          },
+          "plan": {
+            "hours": 719,
+            "overLimit": 111,
+            "severe": 44,
+            "stop": 27,
+            "workMin": 38025,
+            "missed": 87,
+            "splitDays": 78,
+            "shortDays": 29
+          }
+        }
+      }
+    },
+    {
+      "id": "chennai",
+      "name": "Chennai",
+      "lat": 13.08,
+      "lon": 80.27,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 716,
+            "stop": 607,
+            "workMin": 1995
+          },
+          "plan": {
+            "hours": 290,
+            "overLimit": 290,
+            "severe": 67,
+            "stop": 1,
+            "workMin": 7680,
+            "missed": 67,
+            "splitDays": 36,
+            "shortDays": 91
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 720,
+            "severe": 682,
+            "stop": 546,
+            "workMin": 3540
+          },
+          "plan": {
+            "hours": 477,
+            "overLimit": 280,
+            "severe": 55,
+            "stop": 0,
+            "workMin": 16200,
+            "missed": 116,
+            "splitDays": 85,
+            "shortDays": 90
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 682,
+            "severe": 607,
+            "stop": 397,
+            "workMin": 7650
+          },
+          "plan": {
+            "hours": 632,
+            "overLimit": 179,
+            "severe": 55,
+            "stop": 1,
+            "workMin": 28320,
+            "missed": 162,
+            "splitDays": 91,
+            "shortDays": 88
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 83,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 472,
+            "severe": 295,
+            "stop": 184,
+            "workMin": 22335
+          },
+          "plan": {
+            "hours": 764,
+            "overLimit": 99,
+            "severe": 20,
+            "stop": 9,
+            "workMin": 41505,
+            "missed": 57,
+            "splitDays": 74,
+            "shortDays": 14
+          }
+        }
+      }
+    },
+    {
+      "id": "hyderabad",
+      "name": "Hyderabad",
+      "lat": 17.39,
+      "lon": 78.49,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 576,
+            "stop": 268,
+            "workMin": 9180
+          },
+          "plan": {
+            "hours": 610,
+            "overLimit": 610,
+            "severe": 38,
+            "stop": 0,
+            "workMin": 17730,
+            "missed": 38,
+            "splitDays": 88,
+            "shortDays": 65
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 627,
+            "severe": 447,
+            "stop": 195,
+            "workMin": 13725
+          },
+          "plan": {
+            "hours": 732,
+            "overLimit": 161,
+            "severe": 23,
+            "stop": 3,
+            "workMin": 29505,
+            "missed": 53,
+            "splitDays": 88,
+            "shortDays": 51
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 82,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 447,
+            "severe": 268,
+            "stop": 76,
+            "workMin": 23175
+          },
+          "plan": {
+            "hours": 811,
+            "overLimit": 86,
+            "severe": 22,
+            "stop": 2,
+            "workMin": 41760,
+            "missed": 79,
+            "splitDays": 79,
+            "shortDays": 24
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 43,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 129,
+            "severe": 44,
+            "stop": 27,
+            "workMin": 38745
+          },
+          "plan": {
+            "hours": 770,
+            "overLimit": 55,
+            "severe": 10,
+            "stop": 7,
+            "workMin": 42765,
+            "missed": 35,
+            "splitDays": 29,
+            "shortDays": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "ahmedabad",
+      "name": "Ahmedabad",
+      "lat": 23.02,
+      "lon": 72.57,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 671,
+            "stop": 571,
+            "workMin": 3210
+          },
+          "plan": {
+            "hours": 369,
+            "overLimit": 369,
+            "severe": 31,
+            "stop": 1,
+            "workMin": 10590,
+            "missed": 31,
+            "splitDays": 46,
+            "shortDays": 76
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 90,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 686,
+            "severe": 627,
+            "stop": 525,
+            "workMin": 5190
+          },
+          "plan": {
+            "hours": 519,
+            "overLimit": 208,
+            "severe": 50,
+            "stop": 2,
+            "workMin": 19230,
+            "missed": 82,
+            "splitDays": 69,
+            "shortDays": 73
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 86,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 627,
+            "severe": 571,
+            "stop": 395,
+            "workMin": 9720
+          },
+          "plan": {
+            "hours": 656,
+            "overLimit": 163,
+            "severe": 38,
+            "stop": 0,
+            "workMin": 30990,
+            "missed": 116,
+            "splitDays": 82,
+            "shortDays": 65
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 78,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 461,
+            "severe": 311,
+            "stop": 206,
+            "workMin": 22095
+          },
+          "plan": {
+            "hours": 754,
+            "overLimit": 117,
+            "severe": 19,
+            "stop": 3,
+            "workMin": 40950,
+            "missed": 71,
+            "splitDays": 62,
+            "shortDays": 12
+          }
+        }
+      }
+    },
+    {
+      "id": "pune",
+      "name": "Pune",
+      "lat": 18.52,
+      "lon": 73.86,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 431,
+            "stop": 144,
+            "workMin": 13215
+          },
+          "plan": {
+            "hours": 707,
+            "overLimit": 707,
+            "severe": 58,
+            "stop": 1,
+            "workMin": 20325,
+            "missed": 58,
+            "splitDays": 79,
+            "shortDays": 15
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 85,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 502,
+            "severe": 272,
+            "stop": 88,
+            "workMin": 19830
+          },
+          "plan": {
+            "hours": 788,
+            "overLimit": 179,
+            "severe": 31,
+            "stop": 3,
+            "workMin": 31590,
+            "missed": 72,
+            "splitDays": 69,
+            "shortDays": 9
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 65,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 272,
+            "severe": 144,
+            "stop": 29,
+            "workMin": 30540
+          },
+          "plan": {
+            "hours": 849,
+            "overLimit": 127,
+            "severe": 31,
+            "stop": 5,
+            "workMin": 42300,
+            "missed": 122,
+            "splitDays": 43,
+            "shortDays": 1
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 23,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 52,
+            "severe": 13,
+            "stop": 5,
+            "workMin": 41850
+          },
+          "plan": {
+            "hours": 739,
+            "overLimit": 41,
+            "severe": 10,
+            "stop": 4,
+            "workMin": 42630,
+            "missed": 37,
+            "splitDays": 6,
+            "shortDays": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "jaipur",
+      "name": "Jaipur",
+      "lat": 26.91,
+      "lon": 75.79,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 500,
+            "stop": 275,
+            "workMin": 10215
+          },
+          "plan": {
+            "hours": 622,
+            "overLimit": 622,
+            "severe": 46,
+            "stop": 3,
+            "workMin": 17925,
+            "missed": 46,
+            "splitDays": 76,
+            "shortDays": 44
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 81,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 541,
+            "severe": 406,
+            "stop": 217,
+            "workMin": 15300
+          },
+          "plan": {
+            "hours": 705,
+            "overLimit": 159,
+            "severe": 39,
+            "stop": 7,
+            "workMin": 28170,
+            "missed": 75,
+            "splitDays": 72,
+            "shortDays": 38
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 70,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 406,
+            "severe": 275,
+            "stop": 109,
+            "workMin": 24330
+          },
+          "plan": {
+            "hours": 781,
+            "overLimit": 114,
+            "severe": 33,
+            "stop": 6,
+            "workMin": 39885,
+            "missed": 105,
+            "splitDays": 63,
+            "shortDays": 29
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 41,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 152,
+            "severe": 57,
+            "stop": 27,
+            "workMin": 37860
+          },
+          "plan": {
+            "hours": 748,
+            "overLimit": 48,
+            "severe": 9,
+            "stop": 5,
+            "workMin": 42480,
+            "missed": 40,
+            "splitDays": 27,
+            "shortDays": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "lucknow",
+      "name": "Lucknow",
+      "lat": 26.85,
+      "lon": 80.95,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 568,
+            "stop": 389,
+            "workMin": 7485
+          },
+          "plan": {
+            "hours": 470,
+            "overLimit": 470,
+            "severe": 45,
+            "stop": 4,
+            "workMin": 13365,
+            "missed": 45,
+            "splitDays": 51,
+            "shortDays": 60
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 85,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 594,
+            "severe": 483,
+            "stop": 344,
+            "workMin": 11445
+          },
+          "plan": {
+            "hours": 591,
+            "overLimit": 172,
+            "severe": 31,
+            "stop": 5,
+            "workMin": 22755,
+            "missed": 73,
+            "splitDays": 68,
+            "shortDays": 56
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 74,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 483,
+            "severe": 389,
+            "stop": 248,
+            "workMin": 18360
+          },
+          "plan": {
+            "hours": 693,
+            "overLimit": 108,
+            "severe": 39,
+            "stop": 6,
+            "workMin": 34170,
+            "missed": 101,
+            "splitDays": 71,
+            "shortDays": 47
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 59,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 301,
+            "severe": 209,
+            "stop": 149,
+            "workMin": 29280
+          },
+          "plan": {
+            "hours": 741,
+            "overLimit": 76,
+            "severe": 24,
+            "stop": 13,
+            "workMin": 41085,
+            "missed": 59,
+            "splitDays": 46,
+            "shortDays": 7
+          }
+        }
+      }
+    },
+    {
+      "id": "nagpur",
+      "name": "Nagpur",
+      "lat": 21.15,
+      "lon": 79.09,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 632,
+            "stop": 427,
+            "workMin": 5955
+          },
+          "plan": {
+            "hours": 531,
+            "overLimit": 531,
+            "severe": 34,
+            "stop": 1,
+            "workMin": 15405,
+            "missed": 34,
+            "splitDays": 86,
+            "shortDays": 77
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 90,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 664,
+            "severe": 549,
+            "stop": 367,
+            "workMin": 9060
+          },
+          "plan": {
+            "hours": 638,
+            "overLimit": 152,
+            "severe": 26,
+            "stop": 1,
+            "workMin": 25275,
+            "missed": 57,
+            "splitDays": 90,
+            "shortDays": 75
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 86,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 549,
+            "severe": 427,
+            "stop": 196,
+            "workMin": 16620
+          },
+          "plan": {
+            "hours": 772,
+            "overLimit": 121,
+            "severe": 38,
+            "stop": 6,
+            "workMin": 38640,
+            "missed": 94,
+            "splitDays": 87,
+            "shortDays": 49
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 72,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 282,
+            "severe": 133,
+            "stop": 96,
+            "workMin": 31785
+          },
+          "plan": {
+            "hours": 751,
+            "overLimit": 81,
+            "severe": 29,
+            "stop": 16,
+            "workMin": 41265,
+            "missed": 68,
+            "splitDays": 57,
+            "shortDays": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "patna",
+      "name": "Patna",
+      "lat": 25.59,
+      "lon": 85.14,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 586,
+            "stop": 443,
+            "workMin": 6405
+          },
+          "plan": {
+            "hours": 382,
+            "overLimit": 382,
+            "severe": 30,
+            "stop": 1,
+            "workMin": 10995,
+            "missed": 30,
+            "splitDays": 42,
+            "shortDays": 72
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 89,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 614,
+            "severe": 523,
+            "stop": 409,
+            "workMin": 9570
+          },
+          "plan": {
+            "hours": 480,
+            "overLimit": 131,
+            "severe": 23,
+            "stop": 1,
+            "workMin": 18690,
+            "missed": 53,
+            "splitDays": 56,
+            "shortDays": 67
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 83,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 523,
+            "severe": 443,
+            "stop": 322,
+            "workMin": 15570
+          },
+          "plan": {
+            "hours": 603,
+            "overLimit": 99,
+            "severe": 29,
+            "stop": 1,
+            "workMin": 29490,
+            "missed": 78,
+            "splitDays": 73,
+            "shortDays": 56
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 62,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 370,
+            "severe": 278,
+            "stop": 236,
+            "workMin": 24870
+          },
+          "plan": {
+            "hours": 717,
+            "overLimit": 82,
+            "severe": 26,
+            "stop": 18,
+            "workMin": 38550,
+            "missed": 52,
+            "splitDays": 59,
+            "shortDays": 33
+          }
+        }
+      }
+    },
+    {
+      "id": "bhopal",
+      "name": "Bhopal",
+      "lat": 23.26,
+      "lon": 77.41,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 506,
+            "stop": 244,
+            "workMin": 10590
+          },
+          "plan": {
+            "hours": 645,
+            "overLimit": 645,
+            "severe": 44,
+            "stop": 3,
+            "workMin": 18645,
+            "missed": 44,
+            "splitDays": 84,
+            "shortDays": 40
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 87,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 562,
+            "severe": 379,
+            "stop": 166,
+            "workMin": 16155
+          },
+          "plan": {
+            "hours": 727,
+            "overLimit": 140,
+            "severe": 24,
+            "stop": 1,
+            "workMin": 29760,
+            "missed": 53,
+            "splitDays": 80,
+            "shortDays": 35
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 73,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 379,
+            "severe": 244,
+            "stop": 72,
+            "workMin": 25665
+          },
+          "plan": {
+            "hours": 826,
+            "overLimit": 124,
+            "severe": 49,
+            "stop": 6,
+            "workMin": 41400,
+            "missed": 110,
+            "splitDays": 60,
+            "shortDays": 15
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 41,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 117,
+            "severe": 32,
+            "stop": 17,
+            "workMin": 39435
+          },
+          "plan": {
+            "hours": 751,
+            "overLimit": 57,
+            "severe": 13,
+            "stop": 8,
+            "workMin": 42225,
+            "missed": 45,
+            "splitDays": 16,
+            "shortDays": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "varanasi",
+      "name": "Varanasi",
+      "lat": 25.32,
+      "lon": 82.97,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 595,
+            "stop": 432,
+            "workMin": 6435
+          },
+          "plan": {
+            "hours": 425,
+            "overLimit": 425,
+            "severe": 39,
+            "stop": 5,
+            "workMin": 12090,
+            "missed": 39,
+            "splitDays": 45,
+            "shortDays": 70
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 87,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 617,
+            "severe": 526,
+            "stop": 376,
+            "workMin": 9975
+          },
+          "plan": {
+            "hours": 553,
+            "overLimit": 168,
+            "severe": 44,
+            "stop": 6,
+            "workMin": 20955,
+            "missed": 80,
+            "splitDays": 64,
+            "shortDays": 62
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 81,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 526,
+            "severe": 432,
+            "stop": 276,
+            "workMin": 16245
+          },
+          "plan": {
+            "hours": 669,
+            "overLimit": 122,
+            "severe": 36,
+            "stop": 7,
+            "workMin": 32640,
+            "missed": 111,
+            "splitDays": 80,
+            "shortDays": 53
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 63,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 327,
+            "severe": 219,
+            "stop": 181,
+            "workMin": 27870
+          },
+          "plan": {
+            "hours": 761,
+            "overLimit": 97,
+            "severe": 27,
+            "stop": 14,
+            "workMin": 41115,
+            "missed": 61,
+            "splitDays": 53,
+            "shortDays": 12
+          }
+        }
+      }
+    },
+    {
+      "id": "prayagraj",
+      "name": "Prayagraj",
+      "lat": 25.44,
+      "lon": 81.85,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 603,
+            "stop": 449,
+            "workMin": 6060
+          },
+          "plan": {
+            "hours": 445,
+            "overLimit": 445,
+            "severe": 40,
+            "stop": 1,
+            "workMin": 12735,
+            "missed": 40,
+            "splitDays": 52,
+            "shortDays": 69
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 88,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 629,
+            "severe": 545,
+            "stop": 390,
+            "workMin": 9300
+          },
+          "plan": {
+            "hours": 578,
+            "overLimit": 181,
+            "severe": 40,
+            "stop": 4,
+            "workMin": 22140,
+            "missed": 83,
+            "splitDays": 75,
+            "shortDays": 63
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 84,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 545,
+            "severe": 449,
+            "stop": 272,
+            "workMin": 15645
+          },
+          "plan": {
+            "hours": 690,
+            "overLimit": 134,
+            "severe": 33,
+            "stop": 2,
+            "workMin": 33735,
+            "missed": 114,
+            "splitDays": 80,
+            "shortDays": 51
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 65,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 328,
+            "severe": 210,
+            "stop": 150,
+            "workMin": 28440
+          },
+          "plan": {
+            "hours": 762,
+            "overLimit": 99,
+            "severe": 35,
+            "stop": 21,
+            "workMin": 41220,
+            "missed": 66,
+            "splitDays": 52,
+            "shortDays": 6
+          }
+        }
+      }
+    },
+    {
+      "id": "raipur",
+      "name": "Raipur",
+      "lat": 21.25,
+      "lon": 81.63,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 639,
+            "stop": 449,
+            "workMin": 5520
+          },
+          "plan": {
+            "hours": 466,
+            "overLimit": 466,
+            "severe": 28,
+            "stop": 1,
+            "workMin": 13545,
+            "missed": 28,
+            "splitDays": 63,
+            "shortDays": 84
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 669,
+            "severe": 562,
+            "stop": 383,
+            "workMin": 8550
+          },
+          "plan": {
+            "hours": 588,
+            "overLimit": 156,
+            "severe": 28,
+            "stop": 3,
+            "workMin": 22875,
+            "missed": 64,
+            "splitDays": 79,
+            "shortDays": 78
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 88,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 562,
+            "severe": 449,
+            "stop": 231,
+            "workMin": 15465
+          },
+          "plan": {
+            "hours": 705,
+            "overLimit": 99,
+            "severe": 27,
+            "stop": 1,
+            "workMin": 35625,
+            "missed": 75,
+            "splitDays": 88,
+            "shortDays": 66
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 66,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 314,
+            "severe": 162,
+            "stop": 112,
+            "workMin": 30150
+          },
+          "plan": {
+            "hours": 768,
+            "overLimit": 80,
+            "severe": 14,
+            "stop": 8,
+            "workMin": 42240,
+            "missed": 42,
+            "splitDays": 59,
+            "shortDays": 7
+          }
+        }
+      }
+    },
+    {
+      "id": "bhubaneswar",
+      "name": "Bhubaneswar",
+      "lat": 20.3,
+      "lon": 85.82,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 697,
+            "stop": 562,
+            "workMin": 2955
+          },
+          "plan": {
+            "hours": 215,
+            "overLimit": 215,
+            "severe": 28,
+            "stop": 1,
+            "workMin": 6015,
+            "missed": 28,
+            "splitDays": 9,
+            "shortDays": 90
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 710,
+            "severe": 648,
+            "stop": 518,
+            "workMin": 4620
+          },
+          "plan": {
+            "hours": 359,
+            "overLimit": 170,
+            "severe": 39,
+            "stop": 7,
+            "workMin": 12390,
+            "missed": 75,
+            "splitDays": 44,
+            "shortDays": 91
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 648,
+            "severe": 562,
+            "stop": 423,
+            "workMin": 8730
+          },
+          "plan": {
+            "hours": 521,
+            "overLimit": 129,
+            "severe": 35,
+            "stop": 7,
+            "workMin": 23310,
+            "missed": 93,
+            "splitDays": 66,
+            "shortDays": 88
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 84,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 468,
+            "severe": 368,
+            "stop": 315,
+            "workMin": 19395
+          },
+          "plan": {
+            "hours": 708,
+            "overLimit": 91,
+            "severe": 34,
+            "stop": 23,
+            "workMin": 38205,
+            "missed": 67,
+            "splitDays": 83,
+            "shortDays": 33
+          }
+        }
+      }
+    },
+    {
+      "id": "vijayawada",
+      "name": "Vijayawada",
+      "lat": 16.51,
+      "lon": 80.65,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 694,
+            "stop": 543,
+            "workMin": 3285
+          },
+          "plan": {
+            "hours": 349,
+            "overLimit": 349,
+            "severe": 47,
+            "stop": 2,
+            "workMin": 9735,
+            "missed": 47,
+            "splitDays": 47,
+            "shortDays": 90
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 714,
+            "severe": 639,
+            "stop": 487,
+            "workMin": 5160
+          },
+          "plan": {
+            "hours": 527,
+            "overLimit": 221,
+            "severe": 42,
+            "stop": 3,
+            "workMin": 18960,
+            "missed": 81,
+            "splitDays": 90,
+            "shortDays": 89
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 90,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 639,
+            "severe": 543,
+            "stop": 359,
+            "workMin": 10155
+          },
+          "plan": {
+            "hours": 660,
+            "overLimit": 140,
+            "severe": 47,
+            "stop": 3,
+            "workMin": 31455,
+            "missed": 123,
+            "splitDays": 91,
+            "shortDays": 85
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 81,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 427,
+            "severe": 264,
+            "stop": 161,
+            "workMin": 24495
+          },
+          "plan": {
+            "hours": 757,
+            "overLimit": 76,
+            "severe": 23,
+            "stop": 8,
+            "workMin": 41655,
+            "missed": 58,
+            "splitDays": 74,
+            "shortDays": 7
+          }
+        }
+      }
+    },
+    {
+      "id": "churu",
+      "name": "Churu",
+      "lat": 28.3,
+      "lon": 74.97,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 535,
+            "stop": 309,
+            "workMin": 9180
+          },
+          "plan": {
+            "hours": 590,
+            "overLimit": 590,
+            "severe": 45,
+            "stop": 2,
+            "workMin": 16995,
+            "missed": 45,
+            "splitDays": 74,
+            "shortDays": 46
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 81,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 572,
+            "severe": 443,
+            "stop": 236,
+            "workMin": 13995
+          },
+          "plan": {
+            "hours": 675,
+            "overLimit": 142,
+            "severe": 34,
+            "stop": 4,
+            "workMin": 27285,
+            "missed": 69,
+            "splitDays": 80,
+            "shortDays": 42
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 78,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 443,
+            "severe": 309,
+            "stop": 137,
+            "workMin": 22320
+          },
+          "plan": {
+            "hours": 785,
+            "overLimit": 137,
+            "severe": 38,
+            "stop": 3,
+            "workMin": 39360,
+            "missed": 108,
+            "splitDays": 63,
+            "shortDays": 31
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 44,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 182,
+            "severe": 87,
+            "stop": 51,
+            "workMin": 36150
+          },
+          "plan": {
+            "hours": 747,
+            "overLimit": 45,
+            "severe": 11,
+            "stop": 2,
+            "workMin": 42765,
+            "missed": 31,
+            "splitDays": 30,
+            "shortDays": 2
+          }
+        }
+      }
+    },
+    {
+      "id": "banda",
+      "name": "Banda",
+      "lat": 25.48,
+      "lon": 80.34,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 606,
+            "stop": 460,
+            "workMin": 5850
+          },
+          "plan": {
+            "hours": 467,
+            "overLimit": 467,
+            "severe": 39,
+            "stop": 0,
+            "workMin": 13425,
+            "missed": 39,
+            "splitDays": 61,
+            "shortDays": 69
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 89,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 633,
+            "severe": 537,
+            "stop": 393,
+            "workMin": 9315
+          },
+          "plan": {
+            "hours": 588,
+            "overLimit": 162,
+            "severe": 24,
+            "stop": 2,
+            "workMin": 23115,
+            "missed": 64,
+            "splitDays": 83,
+            "shortDays": 65
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 84,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 537,
+            "severe": 460,
+            "stop": 262,
+            "workMin": 15705
+          },
+          "plan": {
+            "hours": 696,
+            "overLimit": 107,
+            "severe": 30,
+            "stop": 6,
+            "workMin": 34785,
+            "missed": 89,
+            "splitDays": 85,
+            "shortDays": 50
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 72,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 320,
+            "severe": 188,
+            "stop": 141,
+            "workMin": 29145
+          },
+          "plan": {
+            "hours": 755,
+            "overLimit": 93,
+            "severe": 24,
+            "stop": 15,
+            "workMin": 41265,
+            "missed": 63,
+            "splitDays": 55,
+            "shortDays": 7
+          }
+        }
+      }
+    },
+    {
+      "id": "chandrapur",
+      "name": "Chandrapur",
+      "lat": 19.96,
+      "lon": 79.3,
+      "loads": {
+        "veryHeavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 728,
+            "severe": 682,
+            "stop": 546,
+            "workMin": 3420
+          },
+          "plan": {
+            "hours": 427,
+            "overLimit": 427,
+            "severe": 40,
+            "stop": 3,
+            "workMin": 12165,
+            "missed": 40,
+            "splitDays": 69,
+            "shortDays": 86
+          }
+        },
+        "heavy": {
+          "days": 91,
+          "hotDays": 91,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 698,
+            "severe": 632,
+            "stop": 490,
+            "workMin": 5460
+          },
+          "plan": {
+            "hours": 568,
+            "overLimit": 161,
+            "severe": 31,
+            "stop": 3,
+            "workMin": 21945,
+            "missed": 69,
+            "splitDays": 91,
+            "shortDays": 83
+          }
+        },
+        "moderate": {
+          "days": 91,
+          "hotDays": 89,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 632,
+            "severe": 546,
+            "stop": 311,
+            "workMin": 11115
+          },
+          "plan": {
+            "hours": 676,
+            "overLimit": 110,
+            "severe": 33,
+            "stop": 4,
+            "workMin": 33675,
+            "missed": 94,
+            "splitDays": 90,
+            "shortDays": 74
+          }
+        },
+        "light": {
+          "days": 91,
+          "hotDays": 81,
+          "fixed": {
+            "hours": 728,
+            "overLimit": 412,
+            "severe": 202,
+            "stop": 126,
+            "workMin": 26400
+          },
+          "plan": {
+            "hours": 760,
+            "overLimit": 86,
+            "severe": 20,
+            "stop": 10,
+            "workMin": 41940,
+            "missed": 52,
+            "splitDays": 72,
+            "shortDays": 3
+          }
+        }
+      }
+    }
+  ]
+}

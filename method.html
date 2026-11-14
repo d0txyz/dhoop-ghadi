@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dhoop Ghadi: how it works</title>
+  <meta name="theme-color" content="#1B1612">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="doc">
+    <p><a href="./">Back to Dhoop Ghadi</a></p>
+    <h1>How it works</h1>
+    <p>Dhoop Ghadi is a small agent with one job: turn tomorrow's weather into work hours a person can follow. It observes, judges, plans and hands over a message. There is no chatbot and no account, and nothing about you is stored.</p>
+
+    <h2>1. Observe: the forecast</h2>
+    <p>For your place it reads the hourly forecast from Open-Meteo: air temperature, humidity, wind and sunshine (total and direct). Open-Meteo is free and needs no key.</p>
+
+    <h2>2. Judge: how hard is the heat on a working body</h2>
+    <p>Air temperature alone misleads. 38°C in humid Kolkata is harder on the body than 43°C in dry Churu. So the agent computes the Wet Bulb Globe Temperature (WBGT), the heat stress index used in occupational health standards (ISO 7243):</p>
+    <p><strong>WBGT = 0.7 × natural wet-bulb + 0.2 × globe + 0.1 × air temperature</strong></p>
+    <p>The globe temperature is what a black ball in the sun would read. The natural wet-bulb is what a wet thermometer reads in open sun and wind. Both are worked out from sunshine, wind, humidity and air pressure with the model of Liljegren and colleagues (2008), the reference method for getting WBGT from ordinary weather data.</p>
+    <p>The code is a port of the Liljegren solver in ECMWF's open-source thermofeel library. The test suite checks it against that library's published values, to within 0.001°C.</p>
+
+    <h2>3. Judge: what that heat allows</h2>
+    <p>Each hour is placed in one of five levels using the heat stress screening limits of the American Conference of Governmental Industrial Hygienists (ACGIH), which depend on how heavy the work is:</p>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr><th>Work</th><th>Work as usual</th><th>45 min work</th><th>30 min work</th><th>15 min work</th><th>Stop above</th></tr>
+        </thead>
+        <tbody id="limits"></tbody>
+      </table>
+    </div>
+    <p>Values are WBGT in °C, the highest value at which that pattern is allowed. People who are new to the work, or back after a week away, get the stricter "action limit" values: tick the box on the main screen.</p>
+
+    <h2>4. Plan: choose the hours</h2>
+    <p>Between 5 am and 8 pm, the agent tries every way to place one or two work blocks and scores each one. A plan loses points for:</p>
+    <ol>
+      <li>falling short of a full day's work (what an eight-hour shift delivers on a cool day: eight hours for light work, six for heavy work, which always needs breaks),</li>
+      <li>hours on site that need half an hour of rest,</li>
+      <li>hours before 7 am or after 6 pm,</li>
+      <li>splitting the day in two, and a long day on site.</li>
+    </ol>
+    <p>So a warm day keeps normal hours with longer breaks, and only a severe afternoon moves work to the morning and evening. The agent never schedules an hour where only 15 minutes of work is allowed: that hour is better spent resting out of the sun. If a full day cannot be done safely, it says how many hours can, and tells you not to push for more.</p>
+
+    <h2>5. Hand over</h2>
+    <p>The plan is one short message in six languages. It can be read aloud, and sent on WhatsApp to a contractor, a crew or a family group.</p>
+
+    <h2>Limits you should know</h2>
+    <ul>
+      <li>This is guidance from a forecast. It is not a medical device and does not replace a doctor, a site safety officer or your own judgment.</li>
+      <li>The heat index is modelled from the forecast, not measured on site. A site on bare concrete, under tin sheets or near a kiln is hotter than the forecast for its town.</li>
+      <li>The limits assume ordinary work clothes, enough drinking water and a healthy adult. Older workers, pregnant women and people who are ill need more caution.</li>
+      <li>The limits are the ACGIH screening table. ACGIH describes it as a screening tool that is more protective than the limits themselves and not meant to prescribe work and rest periods for a managed site. Dhoop Ghadi uses it because cautious is the right side to err on for advice to the public.</li>
+      <li>Text in languages other than English was not reviewed by native speakers. Corrections are welcome in the source repository.</li>
+    </ul>
+
+    <h2>Sources</h2>
+    <ul id="sources">
+      <li>ISO 7243:2017, Ergonomics of the thermal environment: assessment of heat stress using the WBGT index.</li>
+      <li>Liljegren, J. C. et al. (2008). Modeling the wet bulb globe temperature using standard meteorological measurements. Journal of Occupational and Environmental Hygiene.</li>
+      <li>ECMWF thermofeel (Apache Licence 2.0), Liljegren implementation and test values.</li>
+      <li>ACGIH screening criteria for heat stress exposure (TLV and action limit), from <em>2026 TLVs and BEIs</em>, as reproduced by the Canadian Centre for Occupational Health and Safety. ACGIH describes this table as a screening tool that is more protective than the limits themselves, which makes it the cautious choice for advice to the public.</li>
+      <li>NIOSH (2017). Heat Stress: Hydration. One cup (about 240 ml) of water every 15 to 20 minutes.</li>
+      <li>Ministry of Health and Family Welfare, National Centre for Disease Control. Public Health Advisory: Extreme Heat / Heatwave.</li>
+      <li>Open-Meteo.com weather API (forecast, previous model runs, ERA5 archive).</li>
+    </ul>
+  </main>
+
+  <script type="module">
+    import { LIMITS } from './src/thresholds.js';
+    const names = { light: 'Street vending', moderate: 'Delivery, sanitation', heavy: 'Construction, farm labour, brick kiln', veryHeavy: 'Loading, carrying' };
+    const cell = (v) => (v === null ? 'not allowed' : v.toFixed(1));
+    document.getElementById('limits').replaceChildren(
+      ...Object.entries(LIMITS.acclimatized).map(([key, row]) => {
+        const tr = document.createElement('tr');
+        for (const text of [names[key], cell(row[0]), cell(row[1]), cell(row[2]), cell(row[3]), row[3].toFixed(1)]) {
+          const td = document.createElement('td');
+          td.textContent = text;
+          tr.appendChild(td);
+        }
+        return tr;
+      }),
+    );
+  </script>
+</body>
+</html>

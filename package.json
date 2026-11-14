@@ -1,0 +1,13 @@
+{
+  "name": "dhoop-ghadi",
+  "version": "1.0.0",
+  "description": "Safe work hours in extreme heat, for India's outdoor workers.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "backtest": "node backtest/run.js",
+    "serve": "node tools/serve.js"
+  }
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dhoop Ghadi: proof and numbers</title>
+  <meta name="theme-color" content="#1B1612">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="doc">
+    <p><a href="./">Back to Dhoop Ghadi</a></p>
+    <h1>Would the advice have held up in a real summer?</h1>
+    <p id="lead"></p>
+
+    <div class="big" id="big"></div>
+
+    <h2>What was tested</h2>
+    <ol>
+      <li>For every day from <span data-f="start"></span> to <span data-f="end"></span>, in <span data-f="places"></span> places, the agent planned the day from the weather forecast <strong>as it was issued the day before</strong>. That is what a worker would have seen on their phone.</li>
+      <li>That plan was then scored against the weather that <strong>actually happened</strong> on the day.</li>
+      <li>A fixed 9 am to 5 pm shift was scored against the same actual weather.</li>
+    </ol>
+    <p>The planner and the heat index in this test are the same files the app runs. Anyone can repeat it: <code>node backtest/run.js</code>.</p>
+
+    <h2>By kind of work</h2>
+    <div class="scroll">
+      <table id="byLoad">
+        <thead>
+          <tr>
+            <th>Work</th>
+            <th>Severe-heat hours, 9 to 5</th>
+            <th>Severe-heat hours, Dhoop Ghadi</th>
+            <th>Change</th>
+            <th>Safe work per day, 9 to 5</th>
+            <th>Safe work per day, Dhoop Ghadi</th>
+            <th>Forecast misses</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <h2>By place (construction, farm labour, brick kiln)</h2>
+    <div class="scroll">
+      <table id="byCity">
+        <thead>
+          <tr>
+            <th>Place</th>
+            <th>Severe-heat hours, 9 to 5</th>
+            <th>Severe-heat hours, Dhoop Ghadi</th>
+            <th>Safe work per day, 9 to 5</th>
+            <th>Safe work per day, Dhoop Ghadi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <h2>What the words mean</h2>
+    <ul>
+      <li><strong>Severe-heat hour:</strong> an hour on site when the heat index allowed at most 15 minutes of that work, or none.</li>
+      <li><strong>Safe work per day:</strong> minutes of actual work if the worker keeps the rest breaks the heat requires, added up over the shift.</li>
+      <li><strong>Forecast miss:</strong> a planned work hour where the real heat was a level worse than the forecast said.</li>
+    </ul>
+
+    <h2>What this does not prove</h2>
+    <ul>
+      <li>This is a test on weather records. It is not a field trial. No worker has yet been measured using Dhoop Ghadi.</li>
+      <li>"Actual weather" is the ERA5 reanalysis, a gridded reconstruction. A real work site can be hotter than its grid cell, especially on concrete or near a kiln.</li>
+      <li>The heat index is estimated from forecast variables, not measured with a globe thermometer. It uses the Liljegren reference model.</li>
+      <li>The limits are the ACGIH screening table, which is deliberately cautious. That is why even the planned days rarely reach eight hours of heavy work in an Indian summer.</li>
+      <li>The plan assumes the worker can choose their hours. Many cannot without their employer agreeing, which is why the plan is built to be forwarded on WhatsApp.</li>
+    </ul>
+
+    <h2>Live use</h2>
+    <p>No usage is claimed. Dhoop Ghadi went live in November 2026, outside the heat season.</p>
+
+    <p class="credit">Data: Open-Meteo Previous Runs API (day-ahead forecasts) and Archive API (ERA5). Generated <span data-f="generated"></span>.</p>
+  </main>
+
+  <script type="module">
+    const r = await (await fetch('backtest/results.json')).json();
+    const names = { veryHeavy: 'Loading, carrying', heavy: 'Construction, farm labour, brick kiln', moderate: 'Delivery, sanitation', light: 'Street vending' };
+    const n = (x) => Math.round(x).toLocaleString('en-IN');
+    const hpd = (min, days) => (min / 60 / days).toFixed(1) + ' h';
+    const cut = (a, b) => (a ? '-' + Math.round((100 * (a - b)) / a) + '%' : 'n/a');
+    const set = (key, value) => document.querySelectorAll(`[data-f="${key}"]`).forEach((el) => (el.textContent = value));
+    const date = (iso) => new Date(iso + 'T00:00:00Z').toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+    set('start', date(r.start));
+    set('end', date(r.end));
+    set('places', r.cities.length);
+    set('generated', r.generated.slice(0, 10));
+
+    const h = r.loads.heavy;
+    const perWorker = (hours) => Math.round(hours / r.cities.length);
+    document.getElementById('lead').textContent =
+      `Summer 2026, ${r.cities.length} places, ${n(h.days)} place-days. For construction, farm labour and brick kiln work, a 9 to 5 shift ` +
+      `meant ${perWorker(h.fixed.severe)} hours in severe heat per worker over the season. Following Dhoop Ghadi's ` +
+      `day-ahead plan would have meant ${perWorker(h.plan.severe)}.`;
+
+    const big = [
+      [cut(h.fixed.severe, h.plan.severe), 'severe-heat hours on site'],
+      [`${perWorker(h.fixed.severe)} to ${perWorker(h.plan.severe)}`, 'severe-heat hours per worker, April to June'],
+      [`${hpd(h.fixed.workMin, h.days)} to ${hpd(h.plan.workMin, h.days)}`, 'safe work per day'],
+      [((100 * h.plan.missed) / h.plan.hours).toFixed(0) + '%', 'planned hours where the forecast was too mild'],
+    ];
+    document.getElementById('big').replaceChildren(
+      ...big.map(([value, label]) => {
+        const div = document.createElement('div');
+        const b = document.createElement('b');
+        b.textContent = value;
+        const span = document.createElement('span');
+        span.textContent = label;
+        div.append(b, span);
+        return div;
+      }),
+    );
+
+    const row = (cells) => {
+      const tr = document.createElement('tr');
+      for (const c of cells) {
+        const td = document.createElement('td');
+        td.textContent = c;
+        tr.appendChild(td);
+      }
+      return tr;
+    };
+    document.querySelector('#byLoad tbody').replaceChildren(
+      ...Object.entries(r.loads).map(([key, v]) =>
+        row([
+          names[key],
+          n(v.fixed.severe),
+          n(v.plan.severe),
+          cut(v.fixed.severe, v.plan.severe),
+          hpd(v.fixed.workMin, v.days),
+          hpd(v.plan.workMin, v.days),
+          ((100 * v.plan.missed) / Math.max(1, v.plan.hours)).toFixed(1) + '%',
+        ]),
+      ),
+    );
+    document.querySelector('#byCity tbody').replaceChildren(
+      ...r.cities.map((c) => {
+        const v = c.loads.heavy;
+        return row([c.name, n(v.fixed.severe), n(v.plan.severe), hpd(v.fixed.workMin, v.days), hpd(v.plan.workMin, v.days)]);
+      }),
+    );
+  </script>
+</body>
+</html>

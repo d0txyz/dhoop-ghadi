@@ -1,0 +1,6 @@
+node_modules/
+backtest/cache/
+.env
+.env.*
+.vercel/
+.DS_Store
